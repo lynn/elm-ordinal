@@ -1,0 +1,16 @@
+{
+    "version": "1.0.0",
+    "summary": "Elm library for making ordinal strings (1st 2nd 3rd)",
+    "repository": "https://github.com/lynn/elm-ordinal.git",
+    "license": "BSD3",
+    "source-directories": [
+        "src"
+    ],
+    "exposed-modules": [
+        "Ordinal"
+    ],
+    "dependencies": {
+        "elm-lang/core": "4.0.3 <= v < 5.0.0"
+    },
+    "elm-version": "0.17.0 <= v < 0.18.0"
+}
