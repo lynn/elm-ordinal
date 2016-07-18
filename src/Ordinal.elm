@@ -2,8 +2,8 @@ module Ordinal exposing
     ( ordinal, ordinalSuffix
     )
 
-{-| A library for converting integers (`23`, `0`, `-2`) to ordinal strings
-(`"23rd"`, `"0th"`, `"-2nd"`).
+{-| A library for converting integers (`23`, `0`, `-2`) to English ordinal
+strings (`"23rd"`, `"0th"`, `"-2nd"`).
 
 # Ordinal conversion
 @docs ordinal
@@ -13,7 +13,7 @@ module Ordinal exposing
 
 {- Ordinal -}
 
-{-| Get the ordinal suffix (st/nd/rd/th) for a given integer.
+{-| Get the English ordinal suffix (st/nd/rd/th) for a given integer.
 
     ordinalSuffix 42 == "nd"
     ordinalSuffix 0 == "th"
@@ -34,7 +34,7 @@ ordinalSuffix n =
                 _ -> "th"
 
 
-{-| Convert an integer into an ordinal number string (like `"4th"`).
+{-| Convert an integer into an English ordinal number string (like `"4th"`).
 
     ordinal 42 == "42nd"
     ordinal 0 == "0th"
