@@ -28,10 +28,10 @@ ordinalSuffix n =
         n_ =
             abs n
     in
-        if n_ % 100 // 10 == 1 then
+        if modBy n_ 100 // 10 == 1 then
             "th"
         else
-            case n_ % 10 of
+            case modBy n_ 10 of
                 1 ->
                     "st"
 
@@ -53,4 +53,4 @@ ordinalSuffix n =
 -}
 ordinal : Int -> String
 ordinal n =
-    toString n ++ ordinalSuffix n
+    String.fromInt n ++ ordinalSuffix n
