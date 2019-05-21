@@ -18,9 +18,11 @@ strings (`"23rd"`, `"0th"`, `"-2nd"`).
 
 {-| Get the English ordinal suffix (st/nd/rd/th) for a given integer.
 
+    import Ordinal exposing (ordinalSuffix)
+
     ordinalSuffix 42 == "nd"
     ordinalSuffix 0 == "th"
-    ordinalSuffix (-1) == "st"
+    ordinalSuffix -1 == "st"
 -}
 ordinalSuffix : Int -> String
 ordinalSuffix n =
@@ -28,10 +30,10 @@ ordinalSuffix n =
         n_ =
             abs n
     in
-        if n_ % 100 // 10 == 1 then
+        if ( modBy 100 n_ ) // 10 == 1 then
             "th"
         else
-            case n_ % 10 of
+            case modBy 10 n_ of
                 1 ->
                     "st"
 
@@ -47,10 +49,13 @@ ordinalSuffix n =
 
 {-| Convert an integer into an English ordinal number string (like `"4th"`).
 
+    import Ordinal exposing (ordinal)
+
+    ordinal 21 == "21st"
     ordinal 42 == "42nd"
     ordinal 0 == "0th"
-    ordinal (-1) == "-1st"
+    ordinal -1 == "-1st"
 -}
 ordinal : Int -> String
 ordinal n =
-    toString n ++ ordinalSuffix n
+    String.fromInt n ++ ordinalSuffix n
