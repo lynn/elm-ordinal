@@ -20,7 +20,7 @@ strings (`"23rd"`, `"0th"`, `"-2nd"`).
 
     ordinalSuffix 42 == "nd"
     ordinalSuffix 0 == "th"
-    ordinalSuffix (-1) == "st"
+    ordinalSuffix -1 == "st"
 -}
 ordinalSuffix : Int -> String
 ordinalSuffix n =
@@ -49,7 +49,7 @@ ordinalSuffix n =
 
     ordinal 42 == "42nd"
     ordinal 0 == "0th"
-    ordinal (-1) == "-1st"
+    ordinal -1 == "-1st"
 -}
 ordinal : Int -> String
 ordinal n =
