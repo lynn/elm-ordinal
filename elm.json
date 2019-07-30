@@ -3,7 +3,7 @@
     "name": "lynn/elm-ordinal",
     "summary": "Elm library for making ordinal strings (1st 2nd 3rd)",
     "license": "BSD-3-Clause",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "exposed-modules": [
         "Ordinal"
     ],
